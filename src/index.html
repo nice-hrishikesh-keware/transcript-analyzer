@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble Chart Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <canvas id="bubbleChart" width="800" height="400"></canvas>
+    <script>
+        // Data preparation
+        const data = {
+            datasets: [
+                {
+                    label: 'Issues',
+                    data: [
+  {
+    "x": "2024-07-03",
+    "y": "Acer Nitro 5",
+    "r": 1
+  },
+  {
+    "x": "2024-07-15",
+    "y": "Samsung Galaxy S21",
+    "r": 1
+  },
+  {
+    "x": "2024-07-15",
+    "y": "LG OLED55CXPUA",
+    "r": 1
+  },
+  {
+    "x": "2024-07-22",
+    "y": "LG OLED55CXPUA",
+    "r": 1
+  },
+  {
+    "x": "2024-07-22",
+    "y": "Wireless Earbuds",
+    "r": 1
+  },
+  {
+    "x": "2024-07-23",
+    "y": "Sony Bravia X900H",
+    "r": 1
+  }
+                    ],
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // Chart configuration
+        const config = {
+            type: 'bubble',
+            data: data,
+            options: {
+            }
+        };
+
+        const ctx = document.getElementById('bubbleChart').getContext('2d');
+        const bubbleChart = new Chart(ctx, config);
+    </script>
+</body>
+</html>
